@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'open.repocraft.server'
+version = '0.1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Intentionally empty for now; core Git protocol support uses only JDK APIs.
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
